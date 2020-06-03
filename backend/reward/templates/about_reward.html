@@ -1,0 +1,49 @@
+<!--<!DOCTYPE html>-->
+{% extends "base_generic.html" %}
+
+{% load static %}
+
+<html>
+{% block content %}
+<head>
+    <meta charset="UTF-8">
+    <title>Reward App</title>
+    {% load static %}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
+          integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css"
+          href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/indexstyle.css' %}">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'css/profile.css' %}">
+    <!--    -->
+</head>
+<body>
+<!--    <p class="fakecrumb"> Reward>BHP Reward</p>-->
+<!--    <div class="profilesummary">-->
+<!--        <br>-->
+<!--        <h1>BHP Reward Philosophy </h1>-->
+<ul class="list-inline">
+    <li class="list-inline-item">Reward</li>
+    <li class="list-inline-item">BHP Reward</li>
+</ul>
+
+
+    <div class="profilepoints">
+        <p> add notes here about median, EMV, benefits, blind reward</p>
+        <h2> Useful Links</h2>
+        <li class="profileli">myHR+</li>
+
+        <li class="profileli">Need coaching?</li>
+        <li class="profile1"><a href="https://spo.bhpbilliton.com/sites/HumanResources/central/Forms/Reward_101.aspx" target="_blank">BHP Reward</a></li>
+  
+    </div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</body>
+</html>
+
+
+{% endblock %}

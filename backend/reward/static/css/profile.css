@@ -1,0 +1,30 @@
+
+.content {
+    padding: 10px 100px 0 100px;
+    align-content: center;
+}
+
+.profilesummary{
+
+    width: 1000px;
+    display: flex;
+    justify-content: center;
+    padding: 10px 200px 10px 200px;
+    ;
+}
+
+.profileli {
+    font-size: 20px;
+
+}
+
+
+.bcrumb {
+    colour: red;
+}
+
+
+.content {
+    padding: 10px 100px 0 100px;
+    align-content: center;
+}

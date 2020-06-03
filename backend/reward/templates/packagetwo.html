@@ -1,0 +1,78 @@
+
+
+<!--compa-->
+<div class="col-md-6">
+    <button type="button" id="mybut" class="btn btn-info">Package</button>
+<br>
+    <br>
+
+    <div class="form-row">
+        <label hidden for="one">Proposed Salary $</label>
+        <input hidden type="text" id="firstNumber" value="{{ proposed_Salary }}" size="3"/>
+
+        <!--            <div class="form-group col-md-6">-->
+        <!--                <label for="two">Midpoint $</label>-->
+
+        {% for rem in queryset %}
+        <div class="sixty col-md-5"> Benchmark is ${{ rem.midpoint }} </div>
+
+        <input hidden type="text" id="secondNumber" value="{{ rem.midpoint }}" size="3"/>
+        {% endfor %}
+
+<!--        <div class="form-group col-md-7">-->
+        <div class="col-md-7">
+Proposed Salary of ${{ proposed_Salary }}
+            <div id="result">
+
+            </div>
+            <div id="message"></div>
+            </div>
+<!--        </div>-->
+    </div>
+<hr>
+
+<!--bonus-->
+<!--<div class="col-md-12">-->
+    <div class="form-row">
+        <label hidden for="one">Proposed Salary $</label>
+        <input hidden type="text" id="nineNumber" value="{{ proposed_Salary }}" size="1"/>
+        <!--            </div>-->
+        <div class="form-group col-md-5">
+
+            {% for rem in queryset %}
+            <div class="fivey" id="tenTopNumber"> Bonus is {{ rem.STI }}%</div>
+
+            <input hidden type="text" id="tenNumber" value="{{ rem.STI }}" size="1"/>
+            {% endfor %}
+
+        </div>
+<!--        <div class="form-group col-md-7">-->
+            <div id="resultc">Bonus is</div>
+<!--        </div>-->
+    </div>
+<!--</div>-->
+<hr>
+<!--super-->
+<!--<div class="col-md-6 col-md-12">-->
+    <div class="form-row">
+        <label hidden for="one">Proposed Salary $</label>
+        <input hidden type="text" id="newNumber" value="{{ proposed_Salary }}" size="1"/>
+        <!--            </div>-->
+        <div class="form-group col-md-5">
+
+            {% for rem in queryset %}
+            <div class="fivey" id="newThirdNumber"> Super is {{ rem.superannuation }}%</div>
+
+            <input hidden type="text" id="newSecondNumber" value="{{ rem.superannuation }}" size="1"/>
+            {% endfor %}
+
+        </div>
+<!--        <div class="form-group col-md-7">-->
+            <div id="resultf">Super is</div>
+<!--        </div>-->
+    </div>
+<!--</div>-->
+    <hr>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

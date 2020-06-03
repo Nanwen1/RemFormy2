@@ -1,0 +1,293 @@
+li {
+    padding: 5px 0 0 10px;
+}
+
+/*button {*/
+/*    font-size: 20px;*/
+/*    margin-right: 30px;*/
+/*    color: white;*/
+/*    background: transparent;*/
+/*    border: none;*/
+/*    cursor: pointer;*/
+/*    outline: none;*/
+/*    float: right;*/
+/*}*/
+
+/* Class */
+.navbar {
+    width: 100%;
+    background-color: #212529;
+    /*dark grey*/
+    /*color: white;*/
+    display: inline-block;
+    padding-top: 5px;
+    /*position: sticky;*/
+    float: left;
+    display: block;
+}
+
+
+
+
+.links {
+    height: 0;
+    overflow: hidden;
+    list-style-type: none;
+    font-weight: bold;
+    background-color: #212529;
+    color: #DD5900;
+    /*position: sticky;*/
+
+
+}
+
+
+.show-nav {
+    height: 120px;
+    /*position: sticky;*/
+}
+
+
+/* Media screen size */
+@media screen and (min-width: 768px) {
+    button {
+        display: none;
+    }
+
+    .links {
+        height: auto;
+        display: flex;
+        position: sticky;
+    }
+
+    li {
+        padding: 0 5px 0 0;
+    }
+}
+
+li{
+    /*color: white;*/
+    font-size: 8px;
+}
+a {
+    /*color: white;*/
+    font-size: 12px;
+    font-family: Roboto, Segoe UI, sans-serif;
+    font-weight: 700;
+    -webkit-font-smoothing: antialiased;
+    /*color: #FFFFFF;*/
+    text-align: justify;
+    display: inline-block;
+    /*margin-left: 8px;*/
+    vertical-align: middle;
+    padding: 10px 13px 10px 20px;
+    float: none;
+    height: auto;
+    color: white;
+    position: sticky;
+    /*float: left;*/
+    /*display: block;*/
+
+}
+
+
+a:hover {
+    color: #B7B9BB;
+    background-color: transparent;
+}
+
+.navBarBrand {
+    background-color: #DD5900;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 14px;
+    display: inline-block;
+    padding: 0 10px 0 0px;
+
+}
+
+
+.links{
+    margin-left: 0px;
+    padding: 0px;
+    margin: 0px;
+    margin-top: 0px;
+    vertical-align: center;
+    position: sticky;
+}
+
+
+.rewardorange {
+    color: white;
+    background-color: #DD5900;
+    font-size: 15px;
+    padding: 10px 20px 10px 20px;
+    height: 66px;
+}
+
+img {
+    background-color: #DD5900;
+}
+
+/*.content {*/
+/*    padding: 10px 100px 10px 100px;*/
+
+/*}*/
+
+
+.blind_reward_link {
+    color: #DD5900;
+    padding: 0;
+    margin-top: -3px;
+}
+
+.tagline {
+    /*margin-top: 10px;*/
+    /*!*text-align: center;*!*/
+    /*padding: 5px 20px;*/
+    color: black;
+}
+
+.Summary {
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.taglineknow {
+    colour: blue;
+}
+
+.content {
+    padding: 10px 100px 0 100px;
+    align-content: center;
+}
+
+
+/*.form-group col-md-2 {*/
+/*    padding: 5px 0 0 0;*/
+/*}*/
+
+/*.col-md-6 {*/
+/*    padding: 2px;*/
+/*}*/
+
+/*.sticky {*/
+/*  position: fixed;*/
+/*  top: 0;*/
+/*  width: 100%;*/
+/*}*/
+
+/*.sticky + .content {*/
+/*  padding-top: 60px;*/
+/*}*/
+
+/*//this mainly works and need to rejig for my nav*/
+/*html, body {*/
+/*    margin: 0;*/
+/*    padding: 0;*/
+/*    width: 100%;*/
+/*}*/
+
+/*body {*/
+/*    font-family: Quicksand;*/
+/*}*/
+
+/*header {*/
+/*    width: 100%;*/
+/*    height: 100vh;*/
+/*    background-size: cover;*/
+/*    background-color: pink;*/
+
+/*}*/
+
+/*.content {*/
+/*    width: 90%;*/
+/*    margin: 4em auto;*/
+
+/*}*/
+
+/*.logo {*/
+/*    position: fixed;*/
+/*    float: left;*/
+/*    margin: 16px 36px;*/
+/*    color: #fff;*/
+/*    font-weight: bold;*/
+/*    font-size: 24px;*/
+
+/*}*/
+
+/*nav {*/
+/*    position: fixed;*/
+/*    width: 100%;*/
+
+/*}*/
+
+
+/*nav ul {*/
+/*    list-style: none;*/
+/*    background: rgba(0,0,0,0);*/
+/*    overflow: hidden;*/
+/*    padding: 0;*/
+/*    text-align: center;*/
+/*    margin: 0;*/
+/*    transition: 1s;*/
+/*}*/
+
+/*nav.black ul {*/
+/*       color: #000;*/
+/*}*/
+
+/*nav ul li {*/
+/*    display: inline-block;*/
+/*    padding: 20px;*/
+/*}*/
+
+/*nav ul li a {*/
+/*    text-decoration: none;*/
+/*   color: #fff;*/
+
+/*}*/
+
+.menu-icon{
+    width:100px;
+    text-align: right;
+    box-sizing: border-box;
+    padding: 15px 24px;
+    color: grey;
+    cursor: pointer;
+    /*display: none;*/
+}
+
+/*@media(max-width: 580px){*/
+/*    .logo {*/
+/*        position:fixed;*/
+/*        top:0;*/
+/*        margin-top:15px;*/
+/*    }*/
+
+/*    nav ul{*/
+/*        max-height: 0px;*/
+/*        background: #000;*/
+
+/*    }*/
+
+/*    nav.black ul {*/
+/*        background: #000;*/
+
+/*    }*/
+/*    .showing{*/
+/*        max-height: 20em;*/
+/*    }*/
+
+/*    nav ul li {*/
+/*        box-sizing: border-box;*/
+/*        width: 100%;*/
+/*        padding: 24px 0;*/
+/*        text-align: center;*/
+
+/*    }*/
+
+/*    .menu-icon {*/
+/*        display: block;*/
+/*    }*/

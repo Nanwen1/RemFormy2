@@ -1,0 +1,127 @@
+{% extends "base_generic.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+<html>
+{% block content %}
+<head>
+    <meta charset="UTF-8">
+    <title>Reward App</title>
+    {% load static %}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
+          integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css"
+          href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/indexstyle.css' %}">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'css/form.css' %}">
+    <!--    -->
+</head>
+    <body>
+<!--    <p class="fakecrumb"><a href="/" style="color:ThreeDDarkShadow" , style="padding:0">Reward></a> Profile </p>-->
+ <ul class="list-inline">
+    <li class="list-inline-item">Reward</li>
+    <li class="list-inline-item">Reward Form</li>
+    </ul>
+<div class="row">
+    <div class="col-md-8">
+        <div class=page-header">
+            <h1>Reward Form</h1>
+            <p><i>Previously known as the Reward Proposal Template</i></p>
+        </div>
+
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form|crispy }}
+
+
+
+            <input type="submit" value="Save" class="btn btn-md btn-secondary">
+        </form>
+    </div>
+    <div class="col-md-3">
+            <br>
+            <h4> Did you know... </h4>
+            <p class="taglineknow"> At BHP we do <strong>not</strong> ask candidates for their current
+                salary nor salary expectations?</p>
+            <p class="tagline">See <a href="blind_reward" class="blind_reward_link">Blind Reward</a> for more info.
+            </p>
+         </div>
+</div>
+<br>
+
+<div class="row">
+    <div class="col-md-8">
+        <!--        <div class="package">-->
+
+        <h4>Reward Summary</h4>
+        <div class="Summaryarea">
+
+               Base Salary of $ and bonus of %, Superannuation of % and roster/shift
+                    allowance of $
+                    <br>Note the bonus is based at target. You will/not be eligible for this year's bonus, pro-rata due
+                    to start date
+                    <br>STI is based on individual and company performance in the financial year.
+                    <br>Pay day is monthly/fortnightly
+
+
+            <br>
+        </div>
+    </div>
+</div>
+         <br>
+<div class="row">
+    <ul class="col-md-6">
+        <!--    <div class="useful">-->
+        <h4> Useful links</h4>
+
+            <ul class="list-inline">
+                <li class="list-inline-item">What salary do I offer?</li>
+                <li class="list-inline-item">BHP Benefits</li>
+                <li class="list-inline-item">Location specific benefits</li>
+                <li class="list-inline-item">Site Information</li>
+                <li class="list-inline-item">Roster information</li>
+
+            </ul>
+
+</div>
+</div>
+</div>
+
+
+</div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    </body>
+</html>
+
+
+{% endblock %}
+
+
+
+<!--<body>-->
+<!--    <p class="fakecrumb"><a href="/" style="color:ThreeDDarkShadow" , style="padding:0">Reward></a> Profile </p>-->
+
+
+<!--    <div class="container">-->
+<!--        <h1>Reward Form</h1>-->
+<!--        <br>-->
+<!--        <p><i>Previously known as the Reward Proposal Template</i></p>-->
+<!--        &lt;!&ndash;            <p class="tagline">BHP Reward</p>&ndash;&gt;-->
+<!--        <p class="tagline">Did you know that at BHP we do <strong>not</strong> ask candidates for their current salary nor-->
+<!--            salary expectations?</p>-->
+<!--        <p class="tagline">See <a href="blind_reward" class="blind_reward_link">Blind Reward</a> for more info.</p>-->
+<!--        &lt;!&ndash;                {{ asset_functions  }}&ndash;&gt;>-->
+
+
+<!--        <form method="POST" enctype="multipart/form-data">-->
+<!--            {% csrf_token %}-->
+<!--            {{ form.as_p }}-->
+<!--            <input type="submit" value="Save" class="btn btn-md btn-secondary">-->
+<!--        </form>-->
+<!--    </div>-->
+
+<!--        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
+<!--    </body>-->
+<!--</html>-->

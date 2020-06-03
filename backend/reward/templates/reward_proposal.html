@@ -1,0 +1,227 @@
+{% extends "base_generic.html" %}
+{% load static %}
+
+<html>
+{% block content %}
+<head>
+    <meta charset="UTF-8">
+    <title>Reward App</title>
+    {% load static %}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
+          integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css"
+          href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/indexstyle.css' %}">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'css/form.css' %}">
+    <link rel="stylesheet" href="{% static 'css/proposal.css' %}">
+    </head>
+
+
+
+<body>
+
+
+<ul class="list-inline">
+    <li class="list-inline-item">Reward</li>
+    <li class="list-inline-item">Reward Form</li>
+    <li class="list-inline-item">
+        <!--        <div class="bylineo">-->
+        <i>For grade 13 and below, if you have an executive role click here</i>
+        <!--        </div>-->
+    </li>
+
+</ul>
+
+
+<div class="col-md-12">
+    <div class="page-header">
+        <h1>Reward Form</h1>
+    </div>
+
+
+    <div class="row">
+        <div class="col-md-6">
+            <form method="GET" action="">
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="region">Region</label>
+                        <select id="region" class="form-control" name="region">
+
+                            <option selected>Choose...</option>
+                            {% for cat in categories %}
+                            <option value="{{ cat.region }}">{{ cat.region }}</option>
+                            {% endfor %}
+
+                        </select>
+                    </div>
+
+                    <div class="form-group col-md-6">
+                        <label for="asset_Func">Asset or Function</label>
+                        <select id="asset_Func" class="form-control" name="asset_Func">
+                            <option selected>Choose...</option>
+                            {% for cat in categories %}
+                            <option value="{{ cat.asset_Func }}">{{ cat.asset_Func }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                </div>
+                <div class="form-row">
+
+                    <div class="form-group col-md-6">
+                        <label for="location">Location</label>
+                        <select id="location" class="form-control" name="location">
+                            <option selected>Choose...</option>
+                            <!--                            {% for cat in categories %}-->
+                            <!--                            <option value="{{ cat.asset_Func }}">{{ cat.asset_Func }}</option>-->
+                            <!--                            {% endfor %}-->
+                        </select>
+                    </div>
+
+
+                    <div class="form-group col-md-6">
+                        <label for="roster">Work Schedule</label>
+                        <select id="roster" class="form-control" name="roster">
+                            <option selected>Choose...</option>
+                            <!--                            {% for cat in categories %}-->
+                            <!--                            <option value="{{ cat.jobFamily }}">{{ cat.jobFamily }}</option>-->
+                            <!--                            {% endfor %}-->
+                        </select>
+                    </div>
+                </div>
+
+
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="grade">Grade</label>
+                        <select id="grade" class="form-control" name="grade">
+                            <option selected>Choose...</option>
+                            {% for cat in categories %}
+                            <option value="{{ cat.grade }}">{{ cat.grade }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+
+                    <div class="form-group col-md-6">
+                        <label for="jobFamily">Job Family</label>
+                        <select id="jobFamily" class="form-control" name="jobFamily">
+                            <option selected>Choose...</option>
+                            {% for cat in categories %}
+                            <option value="{{ cat.jobFamily }}">{{ cat.jobFamily }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="proposed_Salary">Proposed Salary
+                            {% if "region" is MinAus %}
+                            AUD
+                            {% endif %}
+
+                        </label>
+                        <input type="number" class="form-control" id="proposed_Salary" name="proposed_Salary">
+                    </div>
+
+                    <div class="form-group col-md-6">
+                        <label for="proposed_Date">Proposed Start Date</label>
+                        <input type="date" class="form-control" id="proposed_Date" name="proposed_Date">
+
+                    </div>
+                    <!--                </div>-->
+
+                    <button type="submit" id="but" class="btn btn-primary" >Search</button>
+                    <!--                    add id-->
+                </div>
+            </form>
+        </div>
+
+        {% include 'side_notes.html' %}
+
+
+    </div>
+</div>
+<div class="salarynew" id="salaryNew"></div>
+
+
+
+
+
+<form>
+    <br>
+
+<!--    <div class="col-md-6">-->
+<!--        <br>-->
+
+<!--        <div class="form-row">-->
+            <!--            <div class="form-group col-md-2">-->
+
+            <!--                <input type="btn" class="btn btn-info" onClick="divideBy()" Value="Compa Ratio" size="2"/>-->
+            <!--            </div>-->
+
+<!--            <div class="form-group col-md-2">-->
+<!--                <div id="result"></div>-->
+
+<!--            </div>-->
+
+
+<!--            <label hidden for="one">Proposed Salary $</label>-->
+<!--            <input hidden type="text" id="firstNumber" value="{{ proposed_Salary }}" size="3"/><br>-->
+
+<!--            <div class="form-group col-md-6">-->
+<!--                <label for="two">Midpoint $</label>-->
+<!--                {% for rem in queryset %}-->
+
+<!--                <input type="text" id="secondNumber" value="{{ rem.midpoint }}" size="3"/><br>-->
+<!--                {% endfor %}-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+
+
+
+<!--<div class="col-md-8">-->
+{% include 'packagetwo.html' %}
+
+<!--</div>-->
+
+
+
+
+
+
+
+{% include 'allowance.html' %}
+
+<br>
+
+
+
+<div class="col-md-12">
+    <div class="row">
+        <div class="col-md-6">
+            {% include 'package.html' %}
+
+        </div>
+        <br>
+        <br>
+    </div>
+    <div>
+        ...
+    </div>
+
+</div>
+
+    <script src="../static/js/script.js"></script>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    {% endblock %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</body>
+</html>
+
+

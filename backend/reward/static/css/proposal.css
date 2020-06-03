@@ -1,0 +1,49 @@
+.body {
+    margin-top: 5px;
+}
+
+#mylinka {
+    color: black;
+    padding: 0 0 1px 0;
+    font-weight: lighter;
+
+
+}
+
+#mylinko {
+    color: black;
+    padding: 0 0 1px 0;
+    font-weight: lighter;
+
+}
+
+/*i{*/
+/*font-weight: lighter;*/
+/*}*/
+
+
+.help-block{
+    font-weight: normal;
+}
+
+
+
+
+
+
+.Summaryarea {
+    background-color: aliceblue;
+}
+
+.useful_link {
+    color: black;
+    /*padding: 0;*/
+    /*margin-top: -3px;*/
+}
+
+.bylineo{
+    color: darkgrey;
+    font-family: "Arial Narrow";
+    font-size: 15px;
+    font-weight: bolder;
+}

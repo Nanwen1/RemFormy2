@@ -1,0 +1,28 @@
+<html>
+
+<head>
+
+     <script language="javascript">
+         document.addEventListener('DOMContentLoaded', function() {
+             function multiply() {
+                 var ans = (document.form.one.value) * (document.form.two.value)
+                 document.form.answer.value = ans;
+                 console.log(ans);
+             }
+
+         })
+     </script>
+
+
+</head>
+
+<body><form name="form">
+<input type="text" name="one" size="2">
+<input type="text" name="two" size="2">
+
+<input type="button" value="answer" name="now" onClick="multiply()">
+<input type="text" name="answer" size="2">
+</form>
+</body>
+
+</html>

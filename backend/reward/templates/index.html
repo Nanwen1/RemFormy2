@@ -1,0 +1,208 @@
+<!--<!DOCTYPE html>-->
+{% extends "base_generic.html"  %}
+
+
+ {% load static %}
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+  <link rel="stylesheet" href="{% static 'css/indexstyle.css' %}">
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+<html >
+{% block content %}
+<head>
+  <meta charset="UTF-8">
+  <title>Reward App</title>
+  {% load static %}
+<!--  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">-->
+<!--  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">-->
+<!--  <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">-->
+<!--    -->
+</head>
+<body>
+<!--<div django-app="Reward App">-->
+<body>
+    <div class="container">
+            <div class="content">
+                <div class="rewardform">
+
+            <h1>Reward Form</h1>
+                <br>
+                <p><i>Previously known as the Reward Proposal Template</i></p>
+<!--            <p class="tagline">BHP Reward</p>-->
+                <p class="tagline">Did you know that at BHP we do <strong>not</strong> ask candidates for their current salary nor salary expectations?</p>
+                <p class="tagline">See <a href="blind_reward" class="blind_reward_link">Blind Reward</a> for more info.</p>
+<!--                {{ asset_functions  }}-->
+
+
+            <form action="" method="post">
+            {% csrf_token %} <!-- csrf token for basic security -->
+                <div class="inputContainer">
+<!--                    <input type="text" id="description" class="taskName" placeholder="Welcome, please ensure you are familiar with Blind Reward for external hires" name="description" required>-->
+<!--                    <label for="description">Note</label>-->
+                </div>
+
+                <div class="inputContainer half last">
+                    <i class="fa fa-caret-down selectArrow"></i>
+                    <select id="region" class="taskCategory" name="category_select">
+                        <option class="disabled" value="">Choose a Region</option>
+                        {% for region in AssetFunction.objects.all %}
+                        <option class="" value="{{ AssetFunction.region }}" name="{{ AssetFunction.region }}">{{ AssetFunction.region
+                            }}
+                        </option>
+                        {% endfor %}
+                    </select>
+                    <label for="region">Region</label>
+                </div>
+
+                <div class="inputContainer half last">
+                    <i class="fa fa-caret-down selectArrow"></i>
+                    <select id="allowance" class="taskCategory" name="category_select">
+                    <option class="disabled" value="">Choose an Asset of Function</option>
+                    {% for region in asset_function %}
+                        <option class="" value="{{ allowances.name }}" name="{{ allowances.name }}">{{ allowances.name }}</option>
+                    {% endfor %}
+                    </select>
+                    <label for="Asset_Function">Asset/Function</label>
+                </div>
+
+
+                 <div class="inputContainer half last">
+                    <i class="fa fa-caret-down selectArrow"></i>
+                    <select id="allowance" class="taskCategory" name="category_select">
+                    <option class="disabled" value="">Position Title</option>
+                    {% for region in asset_function %}
+                        <option class="" value="{{ allowances.name }}" name="{{ allowances.name }}">{{ allowances.name }}</option>
+                    {% endfor %}
+                    </select>
+                    <label for="Position">Position</label>
+                </div>
+
+                    <div class="inputContainer half last">
+                    <i class="fa fa-caret-down selectArrow"></i>
+                    <select id="allowance" class="taskCategory" name="category_select">
+                    <option class="disabled" value="">Graded role or TOT</option>
+                    {% for region in asset_function %}
+                        <option class="" value="{{ allowances.name }}" name="{{ allowances.name }}">{{ allowances.name }}</option>
+                    {% endfor %}
+                    </select>
+                    <label for="Graded_TOT">Graded role or Trade Operator Technician role</label>
+                    </div>
+
+
+                    <div class="inputContainer half last">
+                    <i class="fa fa-caret-down selectArrow"></i>
+                    <select id="allowance" class="taskCategory" name="category_select">
+                    <option class="disabled" value="">Enter Grade or na for benchmark</option>
+                    {% for region in asset_function %}
+                        <option class="" value="{{ allowances.name }}" name="{{ allowances.name }}">{{ allowances.name }}</option>
+                    {% endfor %}
+                    </select>
+                    <label for="Benchmark or Grade">Enter grade or benchmark</label>
+                    </div>
+
+
+                    <div class="inputContainer half last">
+                    <i class="fa fa-caret-down selectArrow"></i>
+                    <select id="allowance" class="taskCategory" name="category_select">
+                    <option class="disabled" value="">Job Family</option>
+                    {% for region in asset_function %}
+                        <option class="" value="{{ allowances.name }}" name="{{ allowances.name }}">{{ allowances.name }}</option>
+                    {% endfor %}
+                    </select>
+                    <label for="Job_Family">Job Family</label>
+                    </div>
+
+                     <div class="inputContainer half last">
+                    <i class="fa fa-caret-down selectArrow"></i>
+                    <select id="allowance" class="taskCategory" name="category_select">
+                    <option class="disabled" value="">Location</option>
+                    {% for region in asset_function %}
+                        <option class="" value="{{ allowances.name }}" name="{{ allowances.name }}">{{ allowances.name }}</option>
+                    {% endfor %}
+                    </select>
+                    <label for="Location">Location</label>
+                    </div>
+
+                 <div class="inputContainer half last">
+                    <i class="fa fa-caret-down selectArrow"></i>
+                    <select id="allowance" class="taskCategory" name="category_select">
+                    <option class="disabled" value="">Roster</option>
+                    {% for region in asset_function %}
+                        <option class="" value="{{ allowances.name }}" name="{{ allowances.name }}">{{ allowances.name }}</option>
+                    {% endfor %}
+                    </select>
+                    <label for="Roster">Roster</label>
+                    </div>
+
+
+                <div class="inputContainer half last right">
+                    <input type="date" id="dueDate" class="taskDate" name="date">
+                    <label for="dueDate">Estimated start date</label>
+                    <ul>
+                        <li>
+                            Note cutoff date for Shareplus is <strong> 1st March </strong>
+                        </li>
+                        <li>
+                            Cutoff date for receiving this year's bonus is <strong> 1st April </strong>
+                        </li>
+                    </ul>
+
+                </div>
+<!--                <div class="row">-->
+<!--                    <button class="taskAdd" name="taskAdd" type="submit"><i class="fa fa-plus icon"></i>Add task-->
+<!--                    </button>-->
+<!--                    <button class="taskDelete" name="taskDelete" formnovalidate="" type="submit"-->
+<!--                            onclick="$('input#sublist').click();"><i class="fa fa-trash-o icon"></i>Delete Tasks-->
+<!--                    </button>-->
+<!--                </div>-->
+<!--                <ul class="taskList">-->
+<!--                    {% for todo in todos %} &lt;!&ndash; django template lang - for loop &ndash;&gt;-->
+<!--                    <li class="taskItem">-->
+<!--                        <input type="checkbox" class="taskCheckbox" name="checkedbox" id="{{ todo.id }}"-->
+<!--                               value="{{ todo.id }}">-->
+<!--                        <label for="{{ todo.id }}"><span class="complete-">{{ todo.title }}</span></label>-->
+<!--                        <span class="category-{{ todo.category }}">{{ todo.category }}</span>-->
+<!--                        <strong class="taskDate"><i class="fa fa-calendar"></i>{{ todo.created }} - {{ todo.due_date }}</strong>-->
+<!--                    </li>-->
+<!--                    {% endfor %}-->
+<!--                </ul>-->
+        <!-- taskList -->
+            </form>
+
+
+                </div>
+            </div><!-- content -->
+ </div><!-- container -->
+    <br>
+    <br>
+    <div class="Summary">
+        <div class="package">
+    <table>
+        <h4>Reward Summary</h4>
+        <p>Package details here</p>
+    </table>
+<br>
+    </div>
+
+    <div class="useful">
+<h4> Useful links based on your selection</h4>
+    <ul>
+        <li>BHP Benefits</li>
+       <li>Location specific benefits</li>
+        <li>Site Information</li>
+        <li>Roster information; annual leave, swing, flyin and out days</li>
+
+    </ul>
+
+
+</div>
+    </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</body>
+</html>
+
+
+
+{% endblock %}
+

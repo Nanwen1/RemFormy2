@@ -1,0 +1,23 @@
+
+
+
+
+<ul class="list-inline">
+<!--    <li class="list-inline-item"  id="firstNumber" value="{{ proposed_Salary }}"> Proposed Salary </li>-->
+<!--    <li class="list-inline-item"> Proposed Salary is ${{ proposed_salary }}</li>-->
+        {% for rem in queryset %}
+    <li class="list-inline-item">Superannuation is {{ rem.superannuation }}%</li>
+    <li class="list-inline-item"> Bonus at target is {{ rem.STI }}% of salary.</li>
+
+<br>
+    <li class="list-inline-item">  {{ rem.asset_Func }}</li>
+    <li class="list-inline-item"> Grade  {{ rem.grade }} {{ rem.jobFamily }}</li>
+        <li class="list-inline-item"> Midpoint is ${{ rem.midpoint }}</li>
+<!--    <li class="list-inline-item">  </li>-->
+
+    {% endfor %}
+
+
+</ul>
+
+

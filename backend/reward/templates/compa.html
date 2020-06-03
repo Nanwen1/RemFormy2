@@ -1,0 +1,61 @@
+<!--<html>-->
+<!--{% block content %}-->
+<!--<head>-->
+<!--    <script language="javascript">-->
+<!--        function divide(one, two) {-->
+<!--            var ans = (document.form.one.value) * (document.form.two.value)-->
+<!--            document.form.answer.value = ans;-->
+
+<!--        }-->
+<!--    </script>-->
+<!--<body>-->
+
+<!--<form name="form">-->
+
+<!--    <div class="row">-->
+<!--        <div class="col-md-6">-->
+<!--            <div class="form-row">-->
+<!--                <div class="form-group col-md-2">-->
+<!--                    <br>-->
+<!--                    <input type="button" class="btn btn-info" value="Divide" onClick="divide()">-->
+<!--                </div>-->
+
+<!--                <div class="form-group col-md-3">-->
+<!--                    <label for="answer">Market Comparison</label><br>-->
+<!--                    <input type="text" name="answer" class="col-md-6">%-->
+<!--                </div>-->
+
+
+<!--                <label hidden for="one">Proposed Salary $</label>-->
+<!--                <input hidden type="text" id="one" value="{{ proposed_Salary }}" size="3"/><br>-->
+<!--                &lt;!&ndash;                <div class="col-md-3">&ndash;&gt;-->
+<!--                &lt;!&ndash;                    <div class="form-group col-md-12">&ndash;&gt;-->
+<!--                &lt;!&ndash;                        <label hidden for="one">Proposed Salary $</label>&ndash;&gt;-->
+<!--                &lt;!&ndash;                        <input hidden type="text" id="one" name="one" value="{{ proposed_Salary }}" >&ndash;&gt;-->
+<!--                &lt;!&ndash;                    &ndash;&gt;-->
+<!--                &lt;!&ndash;                    </div>&ndash;&gt;-->
+<!--                &lt;!&ndash;                </div>&ndash;&gt;-->
+<!--                <div class="col-md-6">-->
+<!--                    <div class="form-group col-md-12">-->
+<!--                        <label for="two">Midpoint $</label>-->
+<!--                        {% for rem in queryset %}-->
+<!--                        <input type="text" id="two" name="two" value="{{ rem.midpoint }}" class="col-md-10">-->
+<!--                        {% endfor %}-->
+
+<!--                    </div>-->
+<!--                </div>-->
+
+
+
+<!--        </div>-->
+<!--    </div>-->
+
+
+<!--</form>-->
+<!--<br>-->
+
+
+<!--{% endblock %}-->
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
+<!--</body>-->
+<!--</html>-->

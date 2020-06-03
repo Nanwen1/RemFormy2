@@ -1,0 +1,43 @@
+<!--<!DOCTYPE html>-->
+{% extends "base_generic.html" %}
+
+{% load static %}
+
+<html>
+{% block content %}
+<head>
+    <meta charset="UTF-8">
+    <title>Reward App</title>
+    {% load static %}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
+          integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css"
+          href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/indexstyle.css' %}">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'css/profile.css' %}">
+    <!--    -->
+</head>
+<body>
+ <ul class="list-inline">
+    <li class="list-inline-item">Reward</li>
+    <li class="list-inline-item">Benefits</li>
+    </ul>
+<!--<p class="fakecrumb"> Reward > Benefits  </p>-->
+    <div class="profilesummary">
+        <br>
+        <h1>Working at BHP </h1>
+    </div>
+    <div class="profilepoints">
+        <li class="profileli">Location specifc Benefits</li>
+        <li class="profileli">BHP Global Benefits</li>
+    </div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</body>
+</html>
+
+
+{% endblock %}
